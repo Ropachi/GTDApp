@@ -1,0 +1,19 @@
+<div class="data-form">
+  <form class="form-signin" action="/users/create" method="POST">
+    <h2 class="form-signin-heading">新担当者登録:</h2>
+
+    <label for="inputName">担当者名</label>
+    <input type="text" name="name" id="inputName" class="form-control" placeholder="担当者名" autofocus>
+
+    <label for="inputEmail">メールアドレス</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required>
+
+    <label for="inputPassword">パスワード(5〜10文字)</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+
+    <label for="inputSection">所属部署</label>
+    <input type="text" name="section" id="inputSection" class="form-control" placeholder="所属部署" required>
+
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">登録</button>
+  </form>
+</div>

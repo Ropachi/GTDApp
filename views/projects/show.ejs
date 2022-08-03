@@ -1,0 +1,30 @@
+<h1 class="center">プロジェクト情報 :
+  <%= project.proname %>
+</h1>
+
+<table class="table">
+  <tr>
+    <th>プロジェクト名</th>
+    <td>
+      <%= project.proname %>
+    </td>
+  </tr>
+  <tr>
+    <th>プロジェクト概略</th>
+    <td>
+      <%= project.description%>
+    </td>
+  </tr>
+</table>
+
+<div>
+  <a class="button" href="<%=`/projects/${project._id}/edit`%>">
+    プロジェクト編集
+  </a>
+</div>
+<div>
+  <a class="button" href="<%= `/projects/${project._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除しますか?')" a>削除</a>
+</div>
+<div>
+  <a class="button" href="/projects">プロジェクトリストを見る。</a>
+</div>

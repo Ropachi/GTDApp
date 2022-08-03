@@ -1,0 +1,10 @@
+<div class="data-form">
+  <form class="form-signin" action="<%=`/projects/${project._id}/update?_method=PUT`%>" method="POST">
+    <h2 class="form-signin-heading">Edit project:</h2>
+    <label for="inputProname">プロジェクト名</label>
+    <input type="text" name="proname" id="inputProname" class="form-control" value="<%= project.proname %>" placeholder="プロジェクト名" autofocus>
+    <label for="inputDescription">プロジェクト概略</label>
+    <input type="text" name="description" id="inputDescription" class="form-control" value="<%= project.description %>" placeholder="プロジェクト概略">
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">修正完了</button>
+  </form>
+</div>

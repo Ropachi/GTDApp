@@ -1,0 +1,28 @@
+<div class="data-form">
+  <form class="form-signin" action="/tasks/create" method="POST">
+    <h2 class="form-signin-heading">タスク登録:</h2>
+
+    <label for="inputTaskname">タスク名</label>
+    <input type="text" name="taskname" id="inputTaskname" class="form-control" placeholder="タスク名" autofocus>
+
+    <label for="inputProject">プロジェクト名</label>
+    <input type="text" name="project" id="inputProject" class="form-control" placeholder="プロジェクト名" required>
+
+    <label for="inputWorker">担当者</label>
+    <input type="text" name="worker" id="inputWorker" class="form-control" placeholder="担当者名" required>
+
+    <label for="inputLimit">期限</label>
+    <input type="date" name="limit" id="inputLimit" class="form-control" placeholder="2030/01/01" required>
+    <br />
+    <label for="inputStatus">状況</label>
+    <select name="status" id="inputStatus">
+      <option value="未着手">未着手</option>
+      <option value="作業中">作業中</option>
+      <option value="保留">保留</option>
+      <option value="完了">完了</option>
+    </select>
+    <br>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="登録">登録</button>
+  </form>
+</div>

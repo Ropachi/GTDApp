@@ -1,0 +1,36 @@
+<h2 class="center">プロジェクト リスト</h2>
+<div class="center">
+  <a class="button" href="/projects/new">新規プロジェクト登録</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>プロジェクト名</th>
+      <th>プロジェクト概略</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% projects.forEach(project => { %>
+    <tr>
+      <td>
+        <a href="<%= `/projects/${project._id}` %>">
+          <%= project.proname %>
+        </a>
+      </td>
+      <td>
+        <%= project.description %>
+      </td>
+      <td>
+        <a href="<%=`projects/${project._id}/edit`%>">
+          編集
+        </a>
+      </td>
+      <td>
+        <a href="<%= `projects/${project._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除して良いですか?')" a>削除</a>
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>

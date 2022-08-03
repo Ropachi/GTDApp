@@ -1,0 +1,51 @@
+<h1 class="center">Task Data for
+  <%= task.taskname %>
+</h1>
+
+<table class="table">
+  <tr>
+    <th>タスク名</th>
+    <td>
+      <%= task.taskname %>
+    </td>
+  </tr>
+  <tr>
+    <th>プロジェクト名</th>
+    <td>
+      <%= task.project%>
+    </td>
+  </tr>
+  <tr>
+    <th>担当者</th>
+    <td>
+      <%= task.worker%>
+    </td>
+  </tr>
+
+  <tr>
+    <th>期限</th>
+    <td>
+      <%= task.limit%>
+    </td>
+  </tr>
+
+  <tr>
+    <th>状況</th>
+    <td>
+      <%= task.status%>
+    </td>
+  </tr>
+
+</table>
+
+<div>
+  <a class="button" href="<%=`/tasks/${task._id}/edit`%>">
+    タスク編集
+  </a>
+</div>
+<div>
+  <a class="button" href="<%= `/tasks/${task._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除して良いですか?')" a>削除</a>
+</div>
+<div>
+  <a class="button" href="/tasks">タスク一覧を見る。</a>
+</div>

@@ -1,0 +1,47 @@
+<h2 class="center">タスク リスト</h2>
+<div class="center">
+  <a class="button" href="/tasks/new">新規タスク登録</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>タスク名</th>
+      <th>プロジェクト名</th>
+      <th>担当者</th>
+      <th>期限</th>
+      <th>状況</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% tasks.forEach(task => { %>
+    <tr>
+      <td>
+        <a href="<%= `/tasks/${task._id}` %>">
+          <%= task.taskname %>
+        </a>
+      </td>
+      <td>
+        <%= task.project %>
+      </td>
+      <td>
+        <%= task.worker %>
+      </td>
+      <td>
+        <%= task.limit %>
+      </td>
+      <td>
+        <%= task.status %>
+      </td>
+
+      <td>
+        <a href="<%=`tasks/${task._id}/edit`%>">
+          編集
+        </a>
+      </td>
+      <td>
+        <a href="<%= `tasks/${task._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除しますか?')" a>削除</a>
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
