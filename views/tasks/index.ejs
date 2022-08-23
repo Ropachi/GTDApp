@@ -1,9 +1,11 @@
+<!--既存タスクリスト表示ページ-->
 <h2 class="center">タスク リスト</h2>
 <div class="center">
   <a class="button" href="/tasks/new">新規タスク登録</a>
 </div>
 <table class="table">
   <thead>
+  <!--項目設定  -->
     <tr>
       <th>タスク名</th>
       <th>プロジェクト名</th>
@@ -13,6 +15,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- タスク一覧をループで表示 -->
     <% tasks.forEach(task => { %>
     <tr>
       <td>
@@ -34,11 +37,13 @@
       </td>
 
       <td>
+        <!-- タスクのIDを編集用ボタンに組み込む。 -->
         <a href="<%=`tasks/${task._id}/edit`%>">
           編集
         </a>
       </td>
       <td>
+        <!-- タスクのIDを削除用ボタンに組み込む。 -->
         <a href="<%= `tasks/${task._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除しますか?')" a>削除</a>
       </td>
     </tr>

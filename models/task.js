@@ -3,6 +3,7 @@
 const mongoose = require("mongoose"),
   { Schema } = mongoose;
 
+//データベースのテーブル:taskのスキーマ設定
 var taskSchema = new Schema(
   {
     taskname: {

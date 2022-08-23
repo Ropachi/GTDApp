@@ -1,9 +1,11 @@
+<!--既存担当者リスト表示-->
 <h2 class="center">担当者リスト</h2>
 <div class="center">
   <a class="button" href="/users/new">新規担当者登録</a>
 </div>
 <table class="table">
   <thead>
+  <!--項目設定  -->
     <tr>
       <th>担当者名</th>
 
@@ -14,6 +16,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- ユーザー一覧をループで表示 -->
     <% users.forEach(user => { %>
     <tr>
       <td>
@@ -28,11 +31,13 @@
         <%= user.section %>
       </td>
       <td>
+        <!-- ユーザーのIDを編集用ボタンに組み込む。 -->
         <a href="<%=`/users/${user._id}/edit`%>">
           編集
         </a>
       </td>
       <td>
+        <!-- ユーザーのIDを削除用ボタンに組み込む。 -->
         <a href="<%=`/users/${user._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除しますか?')" a>削除</a>
       </td>
     </tr>

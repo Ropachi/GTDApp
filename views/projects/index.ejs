@@ -1,3 +1,4 @@
+<!--既存プロジェクトリスト表示ページ-->
 <h2 class="center">プロジェクト リスト</h2>
 <div class="center">
   <a class="button" href="/projects/new">新規プロジェクト登録</a>
@@ -5,6 +6,7 @@
 <table class="table">
   <thead>
     <tr>
+      <!--項目設定  -->
       <th>プロジェクト名</th>
       <th>プロジェクト概略</th>
       <th>編集</th>
@@ -12,6 +14,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- プロジェクト一覧をループで表示 -->
     <% projects.forEach(project => { %>
     <tr>
       <td>
@@ -23,11 +26,13 @@
         <%= project.description %>
       </td>
       <td>
+        <!-- プロジェクトのIDを編集用ボタンに組み込む。 -->
         <a href="<%=`projects/${project._id}/edit`%>">
           編集
         </a>
       </td>
       <td>
+        <!-- プロジェクトのIDを削除用ボタンに組み込む。 -->
         <a href="<%= `projects/${project._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除して良いですか?')" a>削除</a>
       </td>
     </tr>

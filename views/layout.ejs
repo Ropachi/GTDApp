@@ -1,3 +1,4 @@
+<!--レイアウト設定-->
 <!DOCTYPE html>
 <html>
 
@@ -5,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
 	<title>GTD app</title>
+	<!-- スタイルシート指定 -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/gtdapp.css">
 </head>
@@ -15,6 +17,7 @@
 			<h1 id="title">GTD app</h1>
 		</div>
 		<div class="col-sm nav-align">
+			<!-- ユーザーが登録している場合の処理-->
 			<% if (loggedIn) { %>
 				<a href="/">
 					<span class="button">Home</span>
@@ -36,25 +39,32 @@
 		</div>
 
 		<div class="login">
+			<!-- ユーザーが登録している場合の処理-->
 			<% if (loggedIn) { %>
+			<!-- ユーザー名とそのIDを表示	-->
 			<p>Logged in as
 				<a href="<%=`/users/${currentUser._id}`%>">
 					<%= currentUser.name %></a>
+				<!-- ログアウトリンク表示	-->
 				<span class="log-out">
 					<a href="/users/logout">ログアウト</a>
 				</span>
 			</p>
 			<%} else {%>
+			<!-- ユーザーが登録していない場合はログインページへ移動	-->
 			<a href="/users/login">ログイン</a>
 			<% } %>
 		</div>
 	</div>
 	<div class="flashes">
+		<!-- メッセージを表示	-->
 		<% if (flashMessages) { %>
+		<!-- 入力がOKのメッセージを表示	-->
 		<% if (flashMessages.success) { %>
 		<div class="flash success">
 			<%= flashMessages.success %>
 		</div>
+		<!-- エラーメッセージを表示	-->
 		<% } else if (flashMessages.error) { %>
 		<div class="flash error">
 			<%= flashMessages.error %>
@@ -68,5 +78,4 @@
 	</div>
 
 </body>
-
 </html>

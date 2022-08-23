@@ -1,3 +1,4 @@
+<!--新規タスク登録ページ-->
 <div class="data-form">
   <form class="form-signin" action="/tasks/create" method="POST">
     <h2 class="form-signin-heading">タスク登録:</h2>
@@ -14,6 +15,8 @@
     <label for="inputLimit">期限</label>
     <input type="date" name="limit" id="inputLimit" class="form-control" placeholder="2030/01/01" required>
     <br />
+
+    <!-- タスクの状態を設定 -->
     <label for="inputStatus">状況</label>
     <select name="status" id="inputStatus">
       <option value="未着手">未着手</option>

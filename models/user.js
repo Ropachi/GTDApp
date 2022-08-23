@@ -1,10 +1,13 @@
 "use strict";
-
+//mongooseライブラリをロードする。
 const mongoose = require("mongoose"),
   { Schema } = require("mongoose"),
+  //passportライブラリをロードする。
   passportLocalMongoose = require("passport-local-mongoose"),
+  //taskモデルをロードする。
   Task = require("./task");
 
+//データベースのテーブル:userのスキーマ設定
 var userSchema = new Schema(
   {
     name: {
@@ -30,6 +33,7 @@ var userSchema = new Schema(
   }
 );
 
+//passportLocalMongooseプラグインをスキーマに設定する。
 userSchema.plugin(passportLocalMongoose, {
   usernameField: "email"
 });

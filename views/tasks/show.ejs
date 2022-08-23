@@ -1,3 +1,4 @@
+<!--タスク詳細表示ページ-->
 <h1 class="center">Task Data for
   <%= task.taskname %>
 </h1>
@@ -38,12 +39,15 @@
 
 </table>
 
+<!--タスクに関してリンク先ボタン設定-->
 <div>
+                    <!--タスクのIDを編集用ボタンに組み込む。  -->
   <a class="button" href="<%=`/tasks/${task._id}/edit`%>">
     タスク編集
   </a>
 </div>
 <div>
+                    <!-- タスクのIDを削除用ボタンに組み込む。 -->
   <a class="button" href="<%= `/tasks/${task._id}/delete?_method=DELETE` %>" onclick="return confirm('本当に削除して良いですか?')" a>削除</a>
 </div>
 <div>
