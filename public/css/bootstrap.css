@@ -2548,7 +2548,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 300px;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -3454,7 +3454,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block {
   display: block;
-  width: 100%;
+  width: 300px;
 }
 .btn-block + .btn-block {
   margin-top: 5px;

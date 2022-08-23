@@ -18,7 +18,7 @@ body {
 }
 
 #title {
-  color: #625a56;
+  color: #337ab7;
   margin: 0;
   font-family: "Baloo Bhaina";
   text-transform: uppercase;
@@ -38,8 +38,8 @@ a {
 }
 
 .nav-align {
-  text-align: center;
-  padding: 3px 0;
+  text-align: left;
+  padding: 3px 40px;
 }
 
 .container {
@@ -152,4 +152,21 @@ button[type=submit] {
     white-space: nowrap;
     font-size: 2vw;
   }
+}
+
+.title {
+  font-color: lightskyblue;
+}
+
+.footer {
+  font-size: 1.6vw;
+  font-color: black;
+  margin-up: 20px;
+  text-align: center;
+  background-color: lightskyblue;
+  padding: 5px 5px;
+
+  position: fixed;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  width: 100%;
 }
