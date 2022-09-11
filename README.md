@@ -1,2 +1,2 @@
 # GTDApp
-ToDo Appli, Javascript, Node.js, Express, EJS, Passport, MongoDB
+ToDo アプリ, Javascript, Node.js, Express, EJS, Passport, MongoDB
